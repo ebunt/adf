@@ -1,0 +1,64 @@
+{
+	"name": "marketing",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "direct-marketing.csv",
+				"container": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Age",
+				"type": "String"
+			},
+			{
+				"name": "Gender",
+				"type": "String"
+			},
+			{
+				"name": "OwnHome",
+				"type": "String"
+			},
+			{
+				"name": "Married",
+				"type": "String"
+			},
+			{
+				"name": "Location",
+				"type": "String"
+			},
+			{
+				"name": "Salary",
+				"type": "String"
+			},
+			{
+				"name": "Children",
+				"type": "String"
+			},
+			{
+				"name": "History",
+				"type": "String"
+			},
+			{
+				"name": "Catalogs",
+				"type": "String"
+			},
+			{
+				"name": "AmountSpent",
+				"type": "String"
+			}
+		]
+	}
+}
