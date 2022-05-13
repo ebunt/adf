@@ -1,0 +1,44 @@
+{
+	"name": "iris",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "azureblobdata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "iris.csv",
+				"container": "data"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Sepal.Length",
+				"type": "String"
+			},
+			{
+				"name": "Sepal.Width",
+				"type": "String"
+			},
+			{
+				"name": "Petal.Length",
+				"type": "String"
+			},
+			{
+				"name": "Petal.Width",
+				"type": "String"
+			},
+			{
+				"name": "Species",
+				"type": "String"
+			}
+		]
+	}
+}
