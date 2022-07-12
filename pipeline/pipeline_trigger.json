@@ -20,6 +20,12 @@
 				}
 			}
 		],
+		"parameters": {
+			"param_1": {
+				"type": "string",
+				"defaultValue": "@trigger().startTime"
+			}
+		},
 		"annotations": []
 	}
 }
