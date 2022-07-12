@@ -4,19 +4,16 @@
 		"description": "testing storage event triggers\n",
 		"activities": [
 			{
-				"name": "Convert File to Parquet",
-				"type": "Copy",
+				"name": "set_drop_file_name",
+				"type": "SetVariable",
 				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableStaging": false
+					"variableName": "file",
+					"value": {
+						"value": "@pipeline().parameters.param_1",
+						"type": "Expression"
+					}
 				}
 			}
 		],
@@ -24,6 +21,11 @@
 			"param_1": {
 				"type": "string",
 				"defaultValue": "@trigger().startTime"
+			}
+		},
+		"variables": {
+			"file": {
+				"type": "String"
 			}
 		},
 		"annotations": []
